@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: theme 21s linear infinite;
+    
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        width: 100vw;  
+        height: 100vh; 
+        width: 100vmax;
+        height: 100vmax;
+        background: rgba(0,0,0,0.05);
+        animation: background 90s linear infinite;
+    }
+
+    &:after {
+        left: 15vw;
+    }
+
+    &:before {
+        right: 15vw;
+        animation-delay: -30s;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes theme {
+    0% , 100%{
+        background: rgb(249, 249, 238);
+    }
+    
+    25% {
+        background: #fcfdfc;
+    }
+    
+    50% {
+      background: #edeee2;
+  }  
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}  
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.main-header img {
+  margin-right: 20px;
+  width: 109px;
+  height: auto;
+  animation: floaty 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+  border-radius: 50%;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.main-header h1 {
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Copperplate Gothic Light';
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowFadeIn 3s ease-in-out forwards;
+  opacity: 0;
+  margin-right: 75px;
+  transform: translateY(-30px);
+  text-shadow: 0 0 10px rgba(0, 198, 255, 0.5),
+               0 0 20px rgba(0, 114, 255, 0.4);
+  margin-bottom: 20px;
+}
+
+@keyframes glowFadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.header {
+  background: #0d47a1;
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.container {
+  background: white;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chatbox {
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.input-area button {
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.symptoms {
+  padding: 10px 15px;
+  background: #f1f5f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.symptom {
+  background: #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.symptom:hover {
+  background: #d6d6d6;
+}
+
+.disclaimer {
+  padding: 10px 15px;
+  background: #fff3cd;
+  font-size: 12px;
+  color: #765902;
+  border-top: 1px solid #ffeeba;
+}

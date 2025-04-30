@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediAssist - Symptom Checker</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="js.js"></script>
+</head>
+<body>
+  <div class="div1">
+    <div class="main-header">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.DVT0hpgi5-xw3uw1EXGWagHaJm&pid=Api&P=0&h=220" alt="Doctor"><br>
+    <h1 >HWS's Medical Chatbot</h1>
+    </div>
+</div>
+  <div class="container">
+    <div class="header">MediAssist</div>
+    <div class="chatbox" id="chat">
+      <p><strong>MediAssist:</strong> Hello! I'm MediAssist, your virtual symptom checker. Please describe your symptoms, and I'll try to provide some information about potential conditions.</p>
+    </div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Describe your symptoms here..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+    <div class="symptoms">
+      <div class="symptom" onclick="quickSymptom('Headache')">Headache</div>
+      <div class="symptom" onclick="quickSymptom('Fever')">Fever</div>
+      <div class="symptom" onclick="quickSymptom('Cough')">Cough</div>
+      <div class="symptom" onclick="quickSymptom('Fatigue')">Fatigue</div>
+      <div class="symptom" onclick="quickSymptom('Nausea')">Nausea</div>
+      <!-- <div class="symptom" onclick="quickSymptom('Dizziness')">Dizziness</div> -->
+      <div class="symptom" onclick="quickSymptom('Back Pain')">Back Pain</div>
+      <div class="symptom" onclick="quickSymptom('Diarrhea')">Diarrhea</div>
+      <!-- <div class="symptom" onclick="quickSymptom('Stomach ache')">Stomach ache</div>  -->
+       <div class="symptom" onclick="quickSymptom('Diabetes')">Diabetes</div>
+      <div class="symptom" onclick="quickSymptom('Vomiting')">Vomiting</div>
+      <div class="symptom" onclick="quickSymptom('Indigestion')">Indigestion</div>
+      <!-- <div class="symptom" onclick="quickSymptom('Mouth Ulcer')">Mouth Ulcer</div>  -->
+    </div>
+    <div class="disclaimer">
+      <b>Important Disclaimer:</b>This tool provides general information only and should not be used for diagnosis or treatment decisions. Always consult with a qualified healthcare provider for medical advice.
+    </div>
+  </div>
+
+</body>
+</html>
